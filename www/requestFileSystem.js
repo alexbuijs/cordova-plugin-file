@@ -19,18 +19,6 @@
  *
 */
 
-//For browser platform: not all browsers use this file.
-function checkBrowser() {
-    if (cordova.platformId === "browser" && require('./isChrome')()) {
-        module.exports = window.requestFileSystem || window.webkitRequestFileSystem;
-        return true;
-    }
-    return false;
-}
-if (checkBrowser()) {
-    //return;
-}
-
 var argscheck = require('cordova/argscheck'),
     FileError = require('./FileError'),
     FileSystem = require('./FileSystem'),
