@@ -23,12 +23,12 @@
 function checkBrowser() {
     if (cordova.platformId === "browser" && require('./isChrome')()) {
         module.exports.resolveLocalFileSystemURL = window.resolveLocalFileSystemURL || window.webkitResolveLocalFileSystemURL;
-        //return true;
+        return true;
     }
     return false;
 }
 if (checkBrowser()) {
-    return;
+    //return;
 }
 
 var argscheck = require('cordova/argscheck'),
