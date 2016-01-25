@@ -19,18 +19,6 @@
  *
 */
 
-//For browser platform: not all browsers use overrided `resolveLocalFileSystemURL`.
-function checkBrowser() {
-    if (cordova.platformId === "browser" && require('./isChrome')()) {
-        module.exports.resolveLocalFileSystemURL = window.resolveLocalFileSystemURL || window.webkitResolveLocalFileSystemURL;
-        return true;
-    }
-    return false;
-}
-if (checkBrowser()) {
-    //return;
-}
-
 var argscheck = require('cordova/argscheck'),
     DirectoryEntry = require('./DirectoryEntry'),
     FileEntry = require('./FileEntry'),
