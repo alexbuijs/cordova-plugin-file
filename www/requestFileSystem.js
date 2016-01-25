@@ -28,7 +28,7 @@ function checkBrowser() {
     return false;
 }
 if (checkBrowser()) {
-    return;
+    //return;
 }
 
 var argscheck = require('cordova/argscheck'),
